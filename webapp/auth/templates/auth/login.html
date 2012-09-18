@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}" media="screen" />
+{% endblock %}
+{% block content %}
+    <h1>Login</h1>
+    <form method="post" action="">
+        {{ form.csrf }}
+            {{ form.username.label(style="float: left; width: 100px;") }}
+            {{ form.username(class="form-login-input") }}
+            {% for error in form.username.errors %} {{ error }} {% endfor %}
+        <br />
+            {{ form.password.label(style="float: left; width: 100px;") }}
+            {{form.password(class="form-login-input") }}
+            {% for error in form.password.errors %} {{ error }} {% endfor %}
+        <br />
+            <input type="submit" value="Login">
+    </form>
+{% endblock %}

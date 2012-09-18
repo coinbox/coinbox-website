@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}" media="screen" />
+{% endblock %}
+{% block content %}
+<div class="block latest">
+    <h3>Get the latest version ({{ latest.version }}) of Coin.Box POS!</h3>
+    <a class="button" href="{{ url_for('direct_download', version='latest') }}">Download Now</a>
+    <br />
+    <span>
+    (size {{ latest.size }}, format {{ latest.format }}, {{ latest.platform }})
+    </span>
+    <p>
+        Checkout the <a href="{{ url_for('documentation.page', slug='installing') }}">Installation Guide</a>
+        and <a href="{{ url_for('documentation.page', slug='getting-started') }}">Getting Started</a>
+        articles in the docs.
+    </p>
+</div>
+
+<div class="block donate">
+    <h3>Like the product? Like the developers: donate.</h3>
+    <p>
+        This software is developed by people whose aim is not money, but if you
+        wish to see this project grow, consider donating even the smallest amount
+        of money.
+    </p>
+    <a class="button" href="#donate">Donate</a>
+    <p>Thank you!</p>
+</div>
+
+<div class="block alternatives">
+    <h3>Alternate Installs</h3>
+    <p>
+    If you are using a Debian-based (Ubuntu/Kubuntu) system, you just need to:
+        <code>sudo apt-get install coinboxpos</code>
+    or download the <a href="{{ url_for('direct_download', platform='debian') }}">.deb package</a>.
+    </p>
+    <p>
+    For Windows, <a href="{{ url_for('direct_download', platform='win32') }}">download the installer</a>.
+    </p>
+    <p>
+    You can always run from source, and install the dependencies on your own.
+    Clone the repo <a href="http://github.com/coinbox">on Github</a> and get running!
+    </p>
+</div>
+{% endblock %}

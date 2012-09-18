@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    {% block head %}
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="{{ meta.description }}" />
+    <meta name="keywords" content="{{ meta.keywords|join(',') }}" />
+    <title>{% block title %}Coin.Box POS{% endblock %}</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/layout.css') }}" media="screen" />
+    {% endblock %}
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <div id="logo">
+                <a href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Coin.Box POS Logo" title="Coin.Box POS"/>
+                </a>
+            </div>
+            <div id="title">
+                <span>An Open-Source POS Solution</span>
+                <br />
+                <span class="caption">Coin.Box POS</span>
+            </div>
+            <div id="menu">
+                <ul>
+                    <a href="{{ url_for('index') }}"><li>Home</li></a>
+                    <a href="{{ url_for('about') }}"><li>About</li></a>
+                    <a href="{{ url_for('download') }}"><li>Download</li></a>
+                    <a href="{{ url_for('faq') }}"><li>FAQ</li></a>
+                    <a href="{{ url_for('documentation.index') }}"><li>Docs</li></a>
+                    <a href="{{ url_for('support') }}"><li>Support</li></a>
+                </ul>
+            </div>
+        </div>
+        <div id="body">
+            {% with messages = get_flashed_messages(with_categories=True) %}
+                {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash flash-{{ category }}">{{ message }}</div>
+                {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            {% block body %}
+                <div id="content">
+                    {% block content %}{% endblock content %}
+                </div>
+                <div id="footer">
+                    Coin.Box POS &copy; Copyright 2012.
+                </div>
+            {% endblock body%}
+        </div>
+    </div>
+</body>
+</html>

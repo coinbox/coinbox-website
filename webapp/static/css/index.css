@@ -1,0 +1,115 @@
+
+#content .left {
+    float: left;
+    width: 420px;
+}
+
+#content .right {
+    float: right;
+    width: 420px;
+}
+
+#content .block {
+    float: none;
+    clear: both;
+    margin: 0 0 20px 0;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    zoom: 1;
+    overflow: auto;
+}
+
+#content .block.news dl {
+    padding: 0;
+    margin: 0;
+}
+
+#content .block.news dt {
+    padding: 0;
+    margin: 0;
+}
+
+#content .block.news dd {
+    margin: 0 0 10px 0;
+    padding: 0 0 0 20px;
+    border-bottom: 1px #2498B1 solid;
+}
+
+#content .block.news dd p {
+    margin: 0;
+    padding: 0;
+}
+
+#content .block.activity {
+    background-color: transparent;
+    border-radius: none;
+    padding: 0;
+}
+
+#content .block.gallery ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#content .block.gallery ul a li {
+    padding: 0;
+    margin: 0 5px;
+    float: left;
+    padding: 5px;
+    background-color: #2498B1;
+    border-radius: 4px;
+    width: 100px;
+    height: 100px;
+}
+
+#content .block.gallery ul a:hover li {
+    background-color: #5F2967;
+}
+
+#content a.button {
+    display: inline-block;
+    float: none;
+    clear: both;
+    margin: 0 auto;
+    padding: 6px;
+    text-align: center;
+    background-color: #B4A2CA;
+    color: #ffffff;
+    font-size: 1.4em;
+    border-radius: 4px;
+    min-width: 100px;
+    min-height: 20px;
+}
+
+#content a.button:hover {
+    background-color: #5F2967;
+    color: #ffffff;
+}
+
+#content .block.latest {
+    width: 450px;
+    float: left;
+    clear: right;
+    text-align: center;
+}
+
+#content .block.donate {
+    width: 450px;
+    float: right;
+    clear: left;
+}
+
+#content .block.alternatives {
+    width: 500px;
+    float: none;
+    clear: both;
+    margin: 0 auto;
+}
+
+#content code {
+    display: block;
+    text-indent: 10px;
+    margin: 5px 0;
+}

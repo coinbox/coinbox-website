@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}User{% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}" media="screen" />
+{% endblock %}
+{% block content %}
+    <h1>User: {{ user.username }}</h1>
+    {% if user.admin %}
+        <a href="{{ url_for('admin.index') }}">Admin Panel</a>
+    {% endif %}
+{% endblock %}

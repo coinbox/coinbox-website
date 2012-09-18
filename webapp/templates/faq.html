@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/about.css') }}" media="screen" />
+{% endblock %}
+{% block content %}
+<h1>Frequently Asked Questions</h1>
+<ol>
+<li>
+<span>Miguel Chavez Gamboa is the founder of <a href="http://www.lemonpos.org/">LemonPOS</a> (May 2007) a linux based C++/Qt/KDE POS program.</span>
+</li>
+<li>
+<span>Jad Kik is the founder of <a href="http://code.google.com/p/wxpos/">wxpos</a> (August 2011) a cross platform python/wx POS program.</span>
+</li>
+<li>
+<span>Benjamin Burt has help with documentation and testing of LemonPOS.</span>
+</li>
+</ol>
+{% endblock %}

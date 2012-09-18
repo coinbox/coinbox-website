@@ -1,0 +1,108 @@
+body {
+    text-align: center;
+    background-color: #D7D9D8;
+    font-family: Verdana;
+    font-size: 14px;
+    color: #0F3A43;
+    padding: 0;
+    margin: 0;
+}
+
+.flash {
+    padding: 5px;
+    margin: 20px 20px 0 20px;
+    background-color: #D7D9D8;
+    border: 2px #ffffff solid;
+    border-radius: 4px;
+    background-position: center left;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+}
+
+.flash.flash-error {
+    background-color: #AF1444;
+    background-image: url("../img/24-message-warn.png");
+}
+
+.flash.flash-message {
+    background-color: #2498B1;
+    background-image: url("../img/24-message-info.png");
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 900px;
+    text-align: left;
+}
+
+#header {
+    float: none;
+    clear: both;
+    height: 110px;
+    padding: 10px;
+    overflow: auto;
+    background-color: #ffffff;
+}
+
+#header #logo {
+    float: left;
+}
+
+#header #title {
+    float: right;
+    clear: right;
+    height: 50px;
+    text-align: right;
+}
+
+#header #title span {
+    font-size: 1.6em;
+}
+
+#header #title span.caption {
+    font-size: 0.8em;
+}
+
+#header #menu {
+    float: right;
+    margin-top: 20px;
+    height: 40px;
+    font-size: 1.4em;
+}
+
+#header #menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+}
+
+#header #menu ul a li {
+    float: left;
+    margin: 0 10px;
+    border-bottom: 3px #2498B1 solid;
+}
+
+#header #menu ul a:hover li {
+    border-bottom-color: #5F2967;
+}
+
+#content {
+    padding: 20px;
+    overflow: auto;
+}
+
+#footer {
+    border-top: 1px #2498B1 solid;
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+a {
+    color: #2498B1;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #5F2967;
+}

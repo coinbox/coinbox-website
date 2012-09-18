@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block title %}
+    Docs - {{ title }}
+{% endblock %}
+{% block content %}
+    {% filter markdown %}
+    {% include [template, 'docs/index.md'] %}
+    {% endfilter %}
+{% endblock %}

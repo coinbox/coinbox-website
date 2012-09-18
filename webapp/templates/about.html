@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/about.css') }}" media="screen" />
+{% endblock %}
+{% block content %}
+<h1>About Us</h1>
+<p>
+This project was started by Miguel Chavez Gamboa, Jad Kik, and Benjamin Burt.
+<ul>
+<li>
+<span>Miguel Chavez Gamboa is the founder of <a href="http://www.lemonpos.org/">LemonPOS</a> (May 2007) a linux based C++/Qt/KDE POS program.</span>
+</li>
+<li>
+<span>Jad Kik is the founder of <a href="http://code.google.com/p/wxpos/">wxpos</a> (August 2011) a cross platform python/wx POS program.</span>
+</li>
+<li>
+<span>Benjamin Burt has help with documentation and testing of LemonPOS.</span>
+</li>
+</ul>
+</p>
+
+<p>
+This project is designed to be <acronym rel="Free Libre Open Source Software">FLOSS</acronym> project,
+that is available for others to use and enjoy.
+We hope to build this project to be helpful and easy to understand.
+We understand that it is important to know how your business is running,
+and to do that you need to have control of products and prices.
+This program is designed with this in mind, and also the ease of usability
+so that someone with limited computer knowledge could make good use of it.
+</p>
+
+<h1>About the Name and Logo</h1>
+
+<p>
+The name Coin Box POS came about after much conversation about what the name should be.
+Where we were merging two different projects we wanted to give it a new name.
+Our main goal we wanted to accomplish with the name is make it easy to know
+what the software tool is, and to make it friendly.
+The image of a coin box spilling out its coins is to symbolize two things.
+The first is that this software tool is open, it is our intent to keep it
+&quot;free&quot; like &quot;freedom&quot; or &quot;free speech&quot;.
+&quot;Freedom&quot; in the ability to change and modify the software to meet
+your needs, and &quot;free&quot; in cost.
+The second is that we intend to create a tool that will help you grow your
+business out of your &quot;box&quot;.
+</p>
+{% endblock %}
